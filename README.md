@@ -1,14 +1,16 @@
 ![](https://img.shields.io/badge/Microverse-blueviolet)
 
-# Webpack Project
+# Metropolitan Museum of Art
 
-> In this project I built a simple yet powerful webpack boilerplate, which will be used as a starting point for other projects.
+> This project displays the art collection using the Metropolitan Museum of Art API. For this project we used HTML, CSS, Javascript, Webpack and Jest.
 
 ## Built With
 
-- Major languages
-- Frameworks
-- Technologies used
+- HTML
+- CSS
+- JavaScript
+- JEST
+- Webpack
 
 ## Getting Started
 
@@ -33,6 +35,12 @@ git clone https://github.com/indigodavid/webpack-first-project.git
 
 
 ## Authors
+
+👤 **Brenda Wihogora**
+
+- GitHub: [@Brenda309](https://github.com/Brenda309)
+- Twitter: [@BrendaWihogora](https://twitter.com/BrendaWihogora)
+- LinkedIn: [LinkedIn](www.linkedin.com/in/brenda-wihogora)
 
 👤 **David Vera**
 
