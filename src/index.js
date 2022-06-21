@@ -3,6 +3,7 @@ import '@fortawesome/fontawesome-free/css/all.css';
 import '@fortawesome/fontawesome-free/js/all.js';
 import './style.css';
 import getDepartments from './modules/get-departments.js';
+import getSearched from './modules/get-searched.js';
 
 const departmentList = document.getElementById('department-list');
 
@@ -13,6 +14,10 @@ getDepartments().then((array) => {
     departmentList.appendChild(li);
   });
 });
+
+getSearched('gogh').then(value => {
+  console.log(value);
+})
 
 /* function component() {
   const element = document.createElement('div');
