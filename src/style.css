@@ -64,6 +64,15 @@ nav ul {
 
 #department-list {
   display: none;
+  position: absolute;
+  background-color: var(--color-accent);
+  color: var(--color-negative);
+  padding: 1rem;
+  box-shadow: -0.2rem 0.2rem 0.2rem var(--color-primary);
+}
+
+#departments-menu:hover #department-list {
+  display: block;
 }
 
 .hello {

@@ -6,15 +6,13 @@ import getDepartments from './modules/get-departments.js';
 
 const departmentList = document.getElementById('department-list');
 
-getDepartments().then(array => {
-  array.forEach(element => {
+getDepartments().then((array) => {
+  array.forEach((element) => {
     const li = document.createElement('li');
     li.innerHTML = element.displayName;
     departmentList.appendChild(li);
   });
 });
-
-
 
 /* function component() {
   const element = document.createElement('div');
