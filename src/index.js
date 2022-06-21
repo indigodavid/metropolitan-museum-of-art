@@ -13,3 +13,8 @@ function component() {
 }
 
 document.body.appendChild(component());
+
+const comment = document.getElementById('comment');
+comment.addEventListener('click', () => {
+  alert('hello');
+});
