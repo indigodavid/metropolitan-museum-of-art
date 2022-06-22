@@ -1,5 +1,10 @@
 const ul = document.getElementById('art-objects');
 
+// To be removed when implemented
+const showPopup = (id) => {
+  console.log(id);
+};
+
 const renderArtObject = (artObject) => {
   if (artObject) {
     const li = document.createElement('li');
@@ -19,7 +24,7 @@ const renderArtObject = (artObject) => {
     h3.innerHTML = artObject.title;
     like.setAttribute('href', '#');
     like.innerHTML = '<i class="fa-regular fa-heart"></i>';
-    p.innerHTML = 'by ' + artObject.artistDisplayName;
+    p.innerHTML = `by ${artObject.artistDisplayName}`;
     likeCounter.innerHTML = '5 likes';
 
     commentButton.classList.add('comment-button');
@@ -47,16 +52,12 @@ const renderArtObject = (artObject) => {
         like.innerHTML = '<i class="fa-regular fa-heart"></i>';
       }
       // add like function
-    })
+    });
 
     img.addEventListener('click', () => {
       showPopup(li.id);
-    })
+    });
   }
-}
-// To be removed when implemented
-const showPopup = (id) => {
-  console.log(id);
-}
+};
 
 export default renderArtObject;

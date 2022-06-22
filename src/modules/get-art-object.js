@@ -4,17 +4,17 @@ const getArtObject = async (objectId) => {
 
   const queryResult = await artObject.json();
   if (
-    queryResult.title && 
-    queryResult.primaryImage && 
-    queryResult.primaryImageSmall && 
-    queryResult.artistDisplayName && 
-    queryResult.objectDate && 
-    queryResult.dimensions && 
-    queryResult.isPublicDomain
-  )
-  {
+    queryResult.title
+    && queryResult.primaryImage
+    && queryResult.primaryImageSmall
+    && queryResult.artistDisplayName
+    && queryResult.objectDate
+    && queryResult.dimensions
+    && queryResult.isPublicDomain
+  ) {
     return queryResult;
   }
+  return null;
 };
 
 export default getArtObject;

@@ -4,8 +4,8 @@ import './style.css';
 import './desktop-style.css';
 import getDepartments from './modules/get-departments.js';
 import getSearched from './modules/get-searched.js';
-import renderArtObject from './modules/render-art-object';
-import getArtObject from './modules/get-art-object';
+import renderArtObject from './modules/render-art-object.js';
+import getArtObject from './modules/get-art-object.js';
 
 const departmentList = document.getElementById('department-list');
 const MAX_ART_OBJECTS = 10;
@@ -18,10 +18,10 @@ getDepartments().then((array) => {
   });
 });
 
-getSearched('painting').then(value => {
+getSearched('painting').then((value) => {
   for (let index = 0; index < 100; index += 1) {
     let counter;
-    getArtObject(value[index]).then(artObject => {
+    getArtObject(value[index]).then((artObject) => {
       counter = document.getElementById('art-objects').children.length;
       if (counter === MAX_ART_OBJECTS) {
         index = Number.MAX_VALUE;
@@ -30,4 +30,4 @@ getSearched('painting').then(value => {
       renderArtObject(artObject);
     });
   }
-})
+});
