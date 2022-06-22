@@ -23,7 +23,6 @@ getSearched('painting').then(value => {
     let counter;
     getArtObject(value[index]).then(artObject => {
       counter = document.getElementById('art-objects').children.length;
-      console.log(counter);
       if (counter === MAX_ART_OBJECTS) {
         index = Number.MAX_VALUE;
         return;
