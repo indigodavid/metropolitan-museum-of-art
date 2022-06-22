@@ -27,6 +27,11 @@ ul {
   padding: 0;
 }
 
+img {
+  max-width: 100%;
+  height: auto;
+}
+
 header {
   margin: 0;
   padding: 1rem;
@@ -73,6 +78,61 @@ nav ul {
 
 #departments-menu:hover #department-list {
   display: block;
+}
+
+#art-objects {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1.5rem;
+}
+
+.art-object {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  flex-basis: 100%;
+  border-radius: 2rem;
+  padding: 2rem;
+  background-color: var(--color-negative);
+  box-shadow: 0.4rem 0.4rem 0.4rem var(--color-primary), -0.1rem -0.1rem 0.1rem var(--color-primary);
+}
+
+.art-object img:hover {
+  cursor: pointer;
+}
+
+.art-info {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+}
+
+.art-info > * {
+  flex-basis: 80%;
+}
+
+.art-info > *:nth-child(2n) {
+  flex-basis: 20%;
+  text-align: right;
+}
+
+.comment-button {
+  flex-basis: 50%;
+  padding: 1rem;
+  appearance: none;
+  font-size: 1rem;
+  font-family: var(--font);
+  border: none;
+  background-color: var(--color-accent);
+  color: var(--color-negative);
+  border-radius: 1rem;
+}
+
+.wrapper {
+  padding: 5%;
+  margin: 0 auto;
 }
 
 .hello {
