@@ -8,7 +8,7 @@ import renderArtObject from './modules/render-art-object.js';
 import getArtObject from './modules/get-art-object.js';
 
 const departmentList = document.getElementById('department-list');
-const MAX_ART_OBJECTS = 10;
+const MAX_ART_OBJECTS = 12;
 
 getDepartments().then((array) => {
   array.forEach((element) => {
