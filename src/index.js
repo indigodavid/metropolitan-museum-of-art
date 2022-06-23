@@ -9,17 +9,8 @@ import getArtObject from './modules/get-art-object.js';
 import itemCounter from './modules/item-counter';
 import renderItemCount from './modules/render-item-count';
 
-const departmentList = document.getElementById('department-list');
 const MAX_ART_OBJECTS = 12;
 const initialSearch = 'painting';
-
-getDepartments().then((array) => {
-  array.forEach((element) => {
-    const li = document.createElement('li');
-    li.innerHTML = element.displayName;
-    departmentList.appendChild(li);
-  });
-});
 
 getSearched(initialSearch).then((value) => {
   for (let index = 0; index < 100; index += 1) {
