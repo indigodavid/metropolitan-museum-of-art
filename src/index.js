@@ -32,4 +32,3 @@ getSearched('painting').then((value) => {
     });
   }
 });
-loadPopup();

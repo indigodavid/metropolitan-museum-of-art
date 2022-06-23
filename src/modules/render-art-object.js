@@ -37,7 +37,7 @@ const renderArtObject = (artObject) => {
         html:
         `<div class=“art-container”>
         <div class=“art-img-container”>
-          <img class=“arts” src=‘${artObject.primaryImage}’ alt=“art” />
+          <img class=“arts” src=${artObject.objectID.primaryImageSmall} alt=“art” />
           </div>
           <h3 class=“art-title”>${artObject.title}</h3>
         <div class=“art-details-container”>
@@ -52,7 +52,7 @@ const renderArtObject = (artObject) => {
        <h4>Add comments</h4>
        <form>
         <input id="name" type="text" placeholder="your name"  required ><br><br>
-    <input id="scores" type="text" placeholder="scores" required ><br><br>
+    <input id="scores" type="text" placeholder="Your insight" required ><br><br>
     <button type="button" id="submit">comment</button>
     </form>
     </div>`,
