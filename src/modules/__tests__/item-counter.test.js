@@ -1,4 +1,5 @@
-import itemCounter from "../item-counter.js";
+import itemCounter from '../item-counter.js';
+
 jest.mock('../get-searched.js');
 
 describe('Item counter', () => {
@@ -16,4 +17,4 @@ describe('Item counter', () => {
     const length = await itemCounter('gogh');
     expect(length).toBe(5);
   });
-})
+});
