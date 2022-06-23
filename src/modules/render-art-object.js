@@ -58,6 +58,12 @@ const renderArtObject = (artObject) => {
       showPopup(li.id);
     });
   }
+  const btns = document.querySelectorAll('.comment-button');
+  btns.forEach((i) => {
+    i.addEventListener('click', () => {
+      alert('never give up');
+    });
+  });
 };
 
 export default renderArtObject;
