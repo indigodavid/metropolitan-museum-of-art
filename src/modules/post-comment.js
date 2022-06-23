@@ -1,4 +1,4 @@
-import renderArtObject from "./render-art-object";
+import renderArtObject from './render-art-object';
 // const postComment = async (objectId, username, comment);
 const username = document.getElementById('name');
 // const comment = document.getElementById('insight');

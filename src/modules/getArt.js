@@ -1,10 +1,10 @@
-import getArtObject from './get-art-object';
 import Swal from 'sweetalert2';
+import getArtObject from './get-art-object';
 
 const loadPopup = (id) => {
-    getArtObject(id).then((artObject) => {
-Swal.fire({
-          html:
+  getArtObject(id).then((artObject) => {
+    Swal.fire({
+      html:
         `<div class=“art-container”>
         <div class=“art-img-container”>
           <img class=“arts” src=${artObject.primaryImageSmall} alt=“art” />
@@ -26,9 +26,9 @@ Swal.fire({
     <button type="button" id="submit">comment</button>
     </form>
     </div>`,
-          showCloseButton: true,
-        });
-});
+      showCloseButton: true,
+    });
+  });
 };
-        
+
 export default loadPopup;
