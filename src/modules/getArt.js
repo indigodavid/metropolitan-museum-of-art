@@ -1,11 +1,15 @@
-// import getDepartments from './modules/get-departments.js';
-// import getSearched from './modules/get-searched.js';
-// import renderArtObject from './render-art-object.js';
-// import getArtObject from './modules/get-art-object.js';
-import '../style.css';
-
-const loadButton = () => {
-
-};
-
-export default loadButton;
+// import
+// const loadPopup = () => {
+// const btns = document.querySelectorAll('.comment-button');
+//   btns.forEach((i) => {
+//     i.addEventListener('click', () => {
+//       const comment = document.getElementById('comment');
+//       const surname = document.createElement('input');
+//       surname.setAttribute('type', 'text');
+//       const insight = document.createElement('input');
+//       insight.setAttribute('type', 'text');
+//       comment.append(surname, insight);
+//     });
+//   });
+// };
+// export default loadPopup;

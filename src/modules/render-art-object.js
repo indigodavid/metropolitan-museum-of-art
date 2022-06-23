@@ -1,3 +1,5 @@
+import Swal from 'sweetalert2';
+
 const ul = document.getElementById('art-objects');
 
 // To be removed when implemented
@@ -30,7 +32,33 @@ const renderArtObject = (artObject) => {
     commentButton.classList.add('comment-button');
     commentButton.innerHTML = 'Comment';
     commentButton.setAttribute('type', 'button');
-
+    commentButton.addEventListener('click', () => {
+      Swal.fire({
+        html:
+        `<div class=“art-container”>
+        <div class=“art-img-container”>
+          <img class=“arts” src=‘${artObject.primaryImage}’ alt=“art” />
+          </div>
+          <h3 class=“art-title”>${artObject.title}</h3>
+        <div class=“art-details-container”>
+           <p> ${artObject.artistDisplayName}</p>
+           <p> ${artObject.dimensions}</p>
+            <p> ${artObject.objectDate}</p>
+        </div>
+        <div class=“comments-container”>
+            <h3 class=“comment-header”>Comments(0)</h3>
+          <ul class=“comments-list”></ul>
+        </div>
+       <h4>Add comments</h4>
+       <form>
+        <input id="name" type="text" placeholder="your name"  required ><br><br>
+    <input id="scores" type="text" placeholder="scores" required ><br><br>
+    <button type="button" id="submit">comment</button>
+    </form>
+    </div>`,
+        showCloseButton: true,
+      });
+    });
     div.appendChild(h3);
     div.appendChild(like);
     div.appendChild(p);
@@ -58,12 +86,6 @@ const renderArtObject = (artObject) => {
       showPopup(li.id);
     });
   }
-  const btns = document.querySelectorAll('.comment-button');
-  btns.forEach((i) => {
-    i.addEventListener('click', () => {
-      alert('never give up');
-    });
-  });
 };
 
 export default renderArtObject;
