@@ -1,16 +1,25 @@
-import renderArtObject from './render-art-object';
-// const postComment = async (objectId, username, comment);
-const username = document.getElementById('name');
-// const comment = document.getElementById('insight');
-console.log(username);
-
-// const URL = 'https://us-central1-involvement-api.cloudfunctions.net/capstoneApi/';
-// const response = await fetch(URL, {
-//   method: 'POST',
-//   body: JSON.stringify({ comment: comment.value, username: username.value }),
-//   headers: { 'Content-type': 'application/json; charset=UTF-8' },
-// });
-// const dataSent = await response.json();
-// return dataSent;
-// export default postComment;
-renderArtObject();
+const sendComment = async (id, name, comment) => {
+  const commentBtn = document.querySelector('.submit');
+  commentBtn.id = id;
+  const inputName = document.querySelector('#name');
+  inputName.value = name;
+  const inputComment = document.querySelector('#insight');
+  inputComment.value = comment;
+  if (!inputName.value || !inputComment.value) {
+    alert('Not empty values allowed, please add your name and comment!');
+  } else {
+    const baseURL = 'https://us-central1-involvement-api.cloudfunctions.net/capstoneApi/apps/pKSoTbGzFhj5RtoeFQif';
+    const connect = await fetch(`${baseURL}/comments/`, {
+      method: 'POST',
+      body: JSON.stringify({
+        item_id: commentBtn.id,
+        username: inputName.value,
+        comment: inputComment.value,
+      }),
+      headers: { 'Content-type': 'application/JSON' },
+    });
+    await connect.text();
+    window.location.reload();
+  }
+};
+export default sendComment;

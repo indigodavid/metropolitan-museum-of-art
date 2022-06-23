@@ -3,6 +3,21 @@
     flex-basis: 30%;
   }
 }
-.add-comment{
-  color:white ;
+
+
+#insight{
+  padding: 50px;
+}
+
+#name{
+  padding: 20px;
+}
+
+.popup-wrapper{
+  width: 100%;
+  height: auto;
+}
+
+.submit {
+  padding: 5px;
 }

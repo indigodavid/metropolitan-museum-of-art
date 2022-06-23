@@ -1,11 +1,12 @@
 import Swal from 'sweetalert2';
-import getArtObject from './get-art-object';
+import getArtObject from './get-art-object.js';
+import sendComment from './post-comment.js';
 
 const loadPopup = (id) => {
   getArtObject(id).then((artObject) => {
     Swal.fire({
       html:
-        `<div class=“art-container”>
+        `<div class=“popup-wrapper”>
         <div class=“art-img-container”>
           <img class=“arts” src=${artObject.primaryImageSmall} alt=“art” />
           </div>
@@ -22,8 +23,8 @@ const loadPopup = (id) => {
        <h4>Add comments</h4>
        <form>
         <input id="name" type="text" placeholder="your name"  required ><br><br>
-    <input id="scores" type="text" placeholder="Your insight" required ><br><br>
-    <button type="button" id="submit">comment</button>
+    <input id="insight" type="text" placeholder="Your insight" required ><br><br>
+    <button type="button" class="submit">comment</button>
     </form>
     </div>`,
       showCloseButton: true,

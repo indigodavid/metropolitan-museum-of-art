@@ -1,11 +1,11 @@
-import loadPopup from './getArt.js';
+import loadPopup from './comment_popup.js';
 
 const ul = document.getElementById('art-objects');
 
 // To be removed when implemented
-const showPopup = (id) => {
-  console.log(id);
-};
+// const showPopup = (id) => {
+//   console.log(id);
+// };
 
 const renderArtObject = (artObject) => {
   if (artObject) {
