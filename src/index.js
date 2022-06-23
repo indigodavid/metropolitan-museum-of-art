@@ -23,8 +23,8 @@ getSearched(initialSearch).then((value) => {
       renderArtObject(artObject);
     });
   }
+});
 
-  itemCounter(initialSearch).then((value) => {
-    renderItemCount(value);
-  });
+itemCounter(initialSearch).then((value) => {
+  renderItemCount(value);
 });
