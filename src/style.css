@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;500;600;700&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 
 *,
 *::after,
@@ -14,12 +14,14 @@
   --color-focus: rgb(152, 208, 152);
   --color-negative: #fff;
   --font: 'Poppins', sans-serif;
+  --font-logo: 'Dancing Script', cursive;
 }
 
 body {
   margin: 0;
   font-size: 1rem;
   font-family: var(--font);
+  background-image: url(./images/bg-texture.jpeg);
 }
 
 ul {
@@ -88,6 +90,12 @@ nav ul {
   gap: 1.5rem;
 }
 
+#home-link {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
 .art-object {
   display: flex;
   flex-direction: column;
@@ -97,6 +105,12 @@ nav ul {
   padding: 2rem;
   background-color: var(--color-negative);
   box-shadow: 0.4rem 0.4rem 0.4rem var(--color-primary), -0.1rem -0.1rem 0.1rem var(--color-primary);
+  transition-timing-function: ease-in-out;
+  transition-duration: 0.5s;
+}
+
+.art-object:hover {
+  transform: scale(1.05);
 }
 
 .art-object img:hover {
@@ -129,6 +143,15 @@ nav ul {
   background-color: var(--color-accent);
   color: var(--color-negative);
   border-radius: 1rem;
+  transition-timing-function: ease-in-out;
+  transition-duration: 0.5s;
+}
+
+.comment-button:hover {
+  color: var(--color-accent);
+  background-color: var(--color-negative);
+  padding: 0.9rem;
+  border: var(--color-accent) 0.1rem solid;
 }
 
 .wrapper {
@@ -136,6 +159,8 @@ nav ul {
   margin: 0 auto;
 }
 
-.hello {
-  color: red;
+.logo-title {
+  font-family: var(--font-logo);
+  font-size: 2.5rem;
+  font-weight: 700;
 }
