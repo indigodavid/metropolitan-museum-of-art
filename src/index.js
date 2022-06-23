@@ -2,12 +2,11 @@ import '@fortawesome/fontawesome-free/css/all.css';
 import '@fortawesome/fontawesome-free/js/all.js';
 import './style.css';
 import './desktop-style.css';
-import getDepartments from './modules/get-departments.js';
 import getSearched from './modules/get-searched.js';
 import renderArtObject from './modules/render-art-object.js';
 import getArtObject from './modules/get-art-object.js';
-import itemCounter from './modules/item-counter';
-import renderItemCount from './modules/render-item-count';
+import itemCounter from './modules/item-counter.js';
+import renderItemCount from './modules/render-item-count.js';
 
 const MAX_ART_OBJECTS = 12;
 const initialSearch = 'painting';
@@ -25,7 +24,7 @@ getSearched(initialSearch).then((value) => {
     });
   }
 
-  itemCounter(initialSearch).then(value => {
+  itemCounter(initialSearch).then((value) => {
     renderItemCount(value);
-  })
+  });
 });
