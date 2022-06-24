@@ -4,6 +4,8 @@ import renderArtObject from "./render-art-object";
 const renderArtArray = async (idsArray, size = 1) => {
   const artArray = [];
   let index = 0;
+  const artObjects = document.getElementById('art-objects');
+  artObjects.innerHTML = '';
   while (artArray.length < size && index < idsArray.length ) {
     const artObject = await getArtObject(idsArray[index++]);
     if (artObject) {

@@ -9,11 +9,27 @@ import renderArtArray from './modules/render-art-array.js';
 
 const MAX_ART_OBJECTS = 12;
 const initialSearch = 'painting';
+const searchInput = document.getElementById('search-input');
 
-getSearched(initialSearch).then((value) => {
-  renderArtArray(value, MAX_ART_OBJECTS);
-})
+const searchArt = (query, displayedResults) => {
+  getSearched(query).then((value) => {
+    renderArtArray(value, displayedResults);
+  });
+  itemCounter(query).then((value) => {
+    renderItemCount(value);
+  });
+}
 
-itemCounter(initialSearch).then((value) => {
-  renderItemCount(value);
-});
+searchArt(initialSearch, MAX_ART_OBJECTS);
+
+searchInput.oninput = () => {
+  window.addEventListener('keypress', (e) => {
+    if (e.key === 'Enter') {
+      if (searchInput.value) {
+        searchArt(searchInput.value, MAX_ART_OBJECTS);
+        searchInput.value = '';
+      }
+    }
+    return null;
+  })
+}
