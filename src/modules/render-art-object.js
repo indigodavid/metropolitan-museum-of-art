@@ -1,12 +1,14 @@
+import displayPopup from './comment_popup.js';
+import getArtObject from './get-art-object.js';
 import getLikes from './get-likes.js';
 import postLike from './post-like.js';
 
 const ul = document.getElementById('art-objects');
 
 // To be removed when implemented
-const showPopup = (id) => {
-  console.log(id);
-};
+// const showPopup = (id) => {
+//   console.log(id);
+// };
 
 const renderArtObject = (artObject) => {
   if (artObject) {
@@ -65,7 +67,14 @@ const renderArtObject = (artObject) => {
     });
 
     img.addEventListener('click', () => {
-      showPopup(li.id);
+      getArtObject(li.id).then((data) => {
+        displayPopup(data);
+      });
+    });
+    commentButton.addEventListener('click', () => {
+      getArtObject(li.id).then((data) => {
+        displayPopup(data);
+      });
     });
   }
 };
