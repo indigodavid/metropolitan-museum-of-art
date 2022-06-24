@@ -23,7 +23,7 @@ const searchArt = (query, displayedResults) => {
   }).catch(() => {
     renderItemCount(0);
   });
-}
+};
 
 searchArt(initialSearch, MAX_ART_OBJECTS);
 
@@ -36,5 +36,5 @@ searchInput.oninput = () => {
       }
     }
     return null;
-  })
-}
+  });
+};

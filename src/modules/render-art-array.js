@@ -1,17 +1,19 @@
-import getArtObject from "./get-art-object.js";
-import renderArtObject from "./render-art-object";
+import getArtObject from './get-art-object.js';
+import renderArtObject from './render-art-object.js';
 
 const renderArtArray = async (idsArray, size = 1) => {
   const artArray = [];
   let index = 0;
   const artObjects = document.getElementById('art-objects');
   artObjects.innerHTML = '';
-  if(!idsArray) {
+  if (!idsArray) {
     artObjects.innerHTML = '<h1>Not found</h1>';
     return [];
   }
-  while (artArray.length < size && index < idsArray.length ) {
-    const artObject = await getArtObject(idsArray[index++]);
+  while (artArray.length < size && index < idsArray.length) {
+    /* eslint-disable */
+    const artObject = await getArtObject(idsArray[index+=1]);
+    /* eslint-enable */
     if (artObject) {
       artArray.push(artObject);
       renderArtObject(artObject);
@@ -21,6 +23,6 @@ const renderArtArray = async (idsArray, size = 1) => {
     artObjects.innerHTML = '<h1>Sorry, the items could not be displayed</h1>';
   }
   return artArray;
-}
+};
 
 export default renderArtArray;
