@@ -1,4 +1,5 @@
-import loadPopup from './comment_popup.js';
+import displayPopup from './comment_popup.js';
+import getArtObject from './get-art-object.js';
 
 const ul = document.getElementById('art-objects');
 
@@ -57,10 +58,14 @@ const renderArtObject = (artObject) => {
     });
 
     img.addEventListener('click', () => {
-      loadPopup(li.id);
+      getArtObject(li.id).then((data) => {
+        displayPopup(data);
+      });
     });
     commentButton.addEventListener('click', () => {
-      loadPopup(li.id);
+      getArtObject(li.id).then((data) => {
+        displayPopup(data);
+      });
     });
   }
 };

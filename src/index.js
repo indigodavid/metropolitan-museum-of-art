@@ -6,8 +6,6 @@ import getDepartments from './modules/get-departments.js';
 import getSearched from './modules/get-searched.js';
 import renderArtObject from './modules/render-art-object.js';
 import getArtObject from './modules/get-art-object.js';
-import sendComment from './modules/post-comment.js';
-import getComments from './modules/get_comment.js';
 
 const departmentList = document.getElementById('department-list');
 const MAX_ART_OBJECTS = 12;
@@ -32,8 +30,4 @@ getSearched('painting').then((value) => {
       renderArtObject(artObject);
     });
   }
-});
-getComments();
-commentBtn.addEventListener('click', () => {
-  sendComment(commentBtn.id, inputName.value, inputComment.value);
 });

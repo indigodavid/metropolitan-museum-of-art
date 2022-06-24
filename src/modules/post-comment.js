@@ -1,25 +1,19 @@
-const sendComment = async (id, name, comment) => {
-  const commentBtn = document.querySelector('.submit');
-  commentBtn.id = id;
-  const inputName = document.querySelector('#name');
-  inputName.value = name;
-  const inputComment = document.querySelector('#insight');
-  inputComment.value = comment;
-  if (!inputName.value || !inputComment.value) {
-    alert('Not empty values allowed, please add your name and comment!');
-  } else {
-    const baseURL = 'https://us-central1-involvement-api.cloudfunctions.net/capstoneApi/apps/pKSoTbGzFhj5RtoeFQif';
-    const connect = await fetch(`${baseURL}/comments/`, {
-      method: 'POST',
-      body: JSON.stringify({
-        item_id: commentBtn.id,
-        username: inputName.value,
-        comment: inputComment.value,
-      }),
-      headers: { 'Content-type': 'application/JSON' },
-    });
-    await connect.text();
-    window.location.reload();
-  }
+import { APP_ID, BASE_URL } from './utils';
+
+const postComment = async (username, comment, itemID) => {
+  console.log('sstarted ', username, comment, itemID);
+  const data = await fetch(`${BASE_URL}/${APP_ID}/comments?item_id=${itemID}`, {
+    method: 'POST',
+    body: JSON.stringify({
+      item_id: itemID,
+      username,
+      comment,
+    }),
+    headers: { 'Content-type': 'application/JSON' },
+  });
+
+  console.log(data);
+  // window.location.reload();
 };
-export default sendComment;
+
+export default postComment;

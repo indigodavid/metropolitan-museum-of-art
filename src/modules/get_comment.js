@@ -1,23 +1,20 @@
-const getComments = async (i, title, wrapper) => {
-  const id = i;
-  const commentTitle = title;
-  const commentsWrapper = wrapper;
-  const baseURL = 'https://us-central1-involvement-api.cloudfunctions.net/capstoneApi/apps/pKSoTbGzFhj5RtoeFQif';
-  const connect = await fetch(
-    `${baseURL}/comments?item_id=commentBtn${id}`,
-    {
-      method: 'GET',
-    },
+import { BASE_URL, APP_ID } from './utils.js';
+
+export const fetchComments = async (itemID) => {
+  const response = await fetch(
+    `${BASE_URL}/${APP_ID}/comments?item_id=${itemID}`,
   );
-  const response = await connect.json();
-  if (connect.status === 200) {
-    commentTitle.innerHTML += `(${response.length})`;
-    for (let i = 0; i < response.length; i += 1) {
-      const entry = document.createElement('p');
-      entry.innerHTML = `${response[i].creation_date}---> ${response[i].username}:  ${response[i].comment}`;
-      commentsWrapper.appendChild(entry);
-    }
+  const data = await response.json();
+  return data.length ? data : [];
+};
+export const getTotalComments = async (itemID) => {
+  try {
+    const response = await fetch(
+      `${BASE_URL}/${APP_ID}/comments?item_id=${itemID}`,
+    );
+    const data = await response.json();
+    return data.length === undefined ? 0 : data.length;
+  } catch (error) {
+    return 0;
   }
 };
-
-export default getComments;
