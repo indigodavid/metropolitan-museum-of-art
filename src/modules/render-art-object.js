@@ -1,5 +1,7 @@
 import displayPopup from './comment_popup.js';
 import getArtObject from './get-art-object.js';
+import getLikes from './get-likes.js';
+import postLike from './post-like.js';
 
 const ul = document.getElementById('art-objects');
 
@@ -28,7 +30,10 @@ const renderArtObject = (artObject) => {
     like.setAttribute('href', '#');
     like.innerHTML = '<i class="fa-regular fa-heart"></i>';
     p.innerHTML = `by ${artObject.artistDisplayName}`;
-    likeCounter.innerHTML = '5 likes';
+    likeCounter.innerHTML = '0 likes';
+    getLikes(li.id).then((value) => {
+      likeCounter.innerHTML = `${value} likes`;
+    });
 
     commentButton.classList.add('comment-button');
     commentButton.innerHTML = 'Comment';
@@ -51,10 +56,14 @@ const renderArtObject = (artObject) => {
 
       if (like.classList.contains('liked')) {
         like.innerHTML = '<i class="fa-solid fa-heart"></i>';
+        postLike(li.id).then(() => {
+          getLikes(li.id).then((value) => {
+            likeCounter.innerHTML = `${value} likes`;
+          });
+        });
       } else {
         like.innerHTML = '<i class="fa-regular fa-heart"></i>';
       }
-      // add like function
     });
 
     img.addEventListener('click', () => {
