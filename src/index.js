@@ -42,4 +42,4 @@ searchInput.oninput = () => {
 
 searchButton.addEventListener('click', () => {
   searchInput.classList.toggle('active');
-})
+});

@@ -1,4 +1,4 @@
-import { BASE_URL, APP_ID } from "./utils";
+import { BASE_URL, APP_ID } from './utils.js';
 
 const postLike = async (objectID, appID = APP_ID) => {
   const endpoint = `/${appID}/likes/`;

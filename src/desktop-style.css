@@ -2,6 +2,7 @@
   nav li {
     flex-direction: row;
   }
+
   .art-object {
     flex-basis: 30%;
   }

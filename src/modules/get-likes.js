@@ -1,4 +1,4 @@
-import { BASE_URL, APP_ID } from "./utils";
+import { BASE_URL, APP_ID } from './utils.js';
 
 const getLikes = async (objectID, appID = APP_ID) => {
   const baseURL = BASE_URL;
