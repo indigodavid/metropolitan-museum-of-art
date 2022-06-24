@@ -20,8 +20,8 @@ const displayPopup = (data) => {
         </div>
        <h4>Add comments</h4>
        <form id='form' method='post' action='#'>
-        <input id="name" type="text" placeholder="your name"  required ><br><br>
-    <input id="comment" type="text" placeholder="Your insight" required ><br><br>
+        <textarea id="name" type="text" placeholder="your name"  required ></textarea> <br><br>
+    <textarea id="comment" type="text" placeholder="Your insight" required > </textarea><br><br>
     <input type="submit" class="submit" value='comment' />
     </form>
     </div>`,
