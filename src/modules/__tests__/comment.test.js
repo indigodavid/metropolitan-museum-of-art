@@ -1,4 +1,4 @@
-import { getTotalComments } from './get_comment.js';
+import { getTotalComments } from '../get_comment.js';
 
 describe('Get Comment Count', () => {
   test('If no data is found, return 0', async () => {

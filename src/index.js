@@ -9,6 +9,7 @@ import renderArtArray from './modules/render-art-array.js';
 
 const MAX_ART_OBJECTS = 12;
 const initialSearch = 'painting';
+const searchButton = document.getElementById('search');
 const searchInput = document.getElementById('search-input');
 const artObjects = document.getElementById('art-objects');
 
@@ -38,3 +39,7 @@ searchInput.oninput = () => {
     return null;
   });
 };
+
+searchButton.addEventListener('click', () => {
+  searchInput.classList.toggle('active');
+});

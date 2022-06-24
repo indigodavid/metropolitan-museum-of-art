@@ -1,7 +1,8 @@
-const postLike = async (objectID, appID = 'pKSoTbGzFhj5RtoeFQif') => {
-  const baseURL = 'https://us-central1-involvement-api.cloudfunctions.net/capstoneApi/apps/';
-  const endpoint = `${appID}/likes/`;
-  const response = await fetch(baseURL + endpoint, {
+import { BASE_URL, APP_ID } from './utils.js';
+
+const postLike = async (objectID, appID = APP_ID) => {
+  const endpoint = `/${appID}/likes/`;
+  const response = await fetch(BASE_URL + endpoint, {
     method: 'POST',
     body: JSON.stringify({
       item_id: objectID,

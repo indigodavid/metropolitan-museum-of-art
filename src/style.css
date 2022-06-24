@@ -11,7 +11,7 @@
   --color-disabled: #9a9a9a;
   --color-accent: #26653a;
   --color-active: #2db32d;
-  --color-focus: rgb(152, 208, 152);
+  --color-focus: rgb(124, 176, 124);
   --color-negative: #fff;
   --font: 'Poppins', sans-serif;
   --font-logo: 'Dancing Script', cursive;
@@ -58,9 +58,16 @@ nav {
   padding: 0;
 }
 
-nav ul {
+nav ul,
+nav li {
   display: flex;
   gap: 1rem;
+  align-items: center;
+  justify-content: center;
+}
+
+nav li {
+  flex-direction: column;
 }
 
 #department-list {
@@ -88,6 +95,27 @@ nav ul {
   display: flex;
   flex-direction: column;
   align-items: center;
+}
+
+#search {
+  border-radius: 50%;
+  background-color: var(--color-focus);
+  width: 2.5rem;
+  height: 2.5rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#search-input {
+  display: none;
+  transform: scaleX(0);
+  font-size: 0.9rem;
+}
+
+#search-input.active {
+  display: block;
+  transform: scaleX(1);
 }
 
 .art-object {

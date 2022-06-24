@@ -5,11 +5,6 @@ import postLike from './post-like.js';
 
 const ul = document.getElementById('art-objects');
 
-// To be removed when implemented
-// const showPopup = (id) => {
-//   console.log(id);
-// };
-
 const renderArtObject = (artObject) => {
   if (artObject) {
     const li = document.createElement('li');
