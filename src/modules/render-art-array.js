@@ -4,7 +4,7 @@ import renderArtObject from "./render-art-object";
 const renderArtArray = async (idsArray, size = 1) => {
   const artArray = [];
   let index = 0;
-  while (artArray.length < size ) {
+  while (artArray.length < size && index < idsArray.length ) {
     const artObject = await getArtObject(idsArray[index++]);
     if (artObject) {
       artArray.push(artObject);
