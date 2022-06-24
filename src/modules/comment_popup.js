@@ -3,7 +3,6 @@ import postComment from './post-comment.js';
 import { fetchComments } from './get_comment.js';
 
 const displayPopup = (data) => {
-  // console.log(data);
   Swal.fire({
     html: `<div class=“popup-wrapper”>
         <div class=“art-img-container”>
