@@ -164,3 +164,21 @@ nav ul {
   font-size: 2.5rem;
   font-weight: 700;
 }
+
+footer{
+  display: flex;
+  flex-direction: row;
+  gap: 20em;
+}
+
+.license-img{
+  width: 50px;
+}
+.logos{
+   display: flex;
+  flex-direction: row;
+}
+
+.references{
+  text-align: center;
+}
