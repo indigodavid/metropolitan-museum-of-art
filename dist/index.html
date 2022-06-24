@@ -4,9 +4,53 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>WebPack Exercise</title>
+  <title>Metropolitan Museum of Art Web Exhibition</title>
 <script defer src="main.js"></script></head>
 <body>
-  <h1>Hello webpack!</h1>
+  <header>
+    <div id="logo">
+      <a href="./index.html" id="home-link">
+        <span class="logo-title">Virtual Display</span>
+        <span class="logo-subtitle">Metropolitan Museum of Art</span>
+      </a>
+    </div>
+    <nav>
+      <ul>
+        <li>
+          <a href="#" id="highlights">
+            <i class="fa-solid fa-star"></i>
+            Found <span id="item-counter"></span> 
+          </a>
+        </li>
+        <li>
+          <a href="#" id="search">
+            <i class="fa-solid fa-magnifying-glass"></i>
+          </a>
+          <input type="text" name="search-input" id="search-input" placeholder="search">
+        </li>
+      </ul>
+    </nav>
+  </header>
+  <div class="wrapper">
+    <ul id="art-objects">
+      <!-- Generated via JS -->
+    </ul>
+  </div>
+  <footer>
+    <div>
+      <p class= "references"> <i>Created by <br>David Vera Castillo & Brenda Wihogora</i></p>
+    </div>
+    <div>
+      <p class= "references"><a href="https://www.freepik.com/photos/material">Material photo created by rawpixel.com - www.freepik.com</a></p> 
+    </div>
+    <div>
+      <div class= "logos">
+        <img class="license-img" src="https://creativecommons.org/images/deed/FreeCulturalWorks_seal_x2.jpg" alt="license">
+        <img class="license-img" src="https://creativecommons.org/images/deed/cc_icon_white_x2.png " alt="">
+        <img class="license-img" src="https://creativecommons.org/images/deed/zero_white_x2.png " alt="">
+      </div>
+      <p class= "references"><i>CC0 1.0 Universal (CC0 1.0) Public Domain Dedication </i></p>
+    </div>
+  </footer>
 </body>
 </html>

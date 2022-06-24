@@ -1,13 +1,45 @@
-import _ from 'lodash';
+import '@fortawesome/fontawesome-free/css/all.css';
+import '@fortawesome/fontawesome-free/js/all.js';
 import './style.css';
+import './desktop-style.css';
+import getSearched from './modules/get-searched.js';
+import itemCounter from './modules/item-counter.js';
+import renderItemCount from './modules/render-item-count.js';
+import renderArtArray from './modules/render-art-array.js';
 
-function component() {
-  const element = document.createElement('div');
+const MAX_ART_OBJECTS = 12;
+const initialSearch = 'painting';
+const searchButton = document.getElementById('search');
+const searchInput = document.getElementById('search-input');
+const artObjects = document.getElementById('art-objects');
 
-  // Lodash, now imported by this script
-  element.innerHTML = _.join(['Hello', 'webpack'], ' ');
-  element.classList.add('hello');
-  return element;
-}
+const searchArt = (query, displayedResults) => {
+  getSearched(query).then((value) => {
+    renderArtArray(value, displayedResults);
+  }).catch((reason) => {
+    artObjects.innerHTML = reason;
+  });
+  itemCounter(query).then((value) => {
+    renderItemCount(value);
+  }).catch(() => {
+    renderItemCount(0);
+  });
+};
 
-document.body.appendChild(component());
+searchArt(initialSearch, MAX_ART_OBJECTS);
+
+searchInput.oninput = () => {
+  window.addEventListener('keypress', (e) => {
+    if (e.key === 'Enter') {
+      if (searchInput.value) {
+        searchArt(searchInput.value, MAX_ART_OBJECTS);
+        searchInput.value = '';
+      }
+    }
+    return null;
+  });
+};
+
+searchButton.addEventListener('click', () => {
+  searchInput.classList.toggle('active');
+});
