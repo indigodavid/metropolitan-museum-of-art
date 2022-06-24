@@ -10,13 +10,18 @@ import renderArtArray from './modules/render-art-array.js';
 const MAX_ART_OBJECTS = 12;
 const initialSearch = 'painting';
 const searchInput = document.getElementById('search-input');
+const artObjects = document.getElementById('art-objects');
 
 const searchArt = (query, displayedResults) => {
   getSearched(query).then((value) => {
     renderArtArray(value, displayedResults);
+  }).catch((reason) => {
+    artObjects.innerHTML = reason;
   });
   itemCounter(query).then((value) => {
     renderItemCount(value);
+  }).catch(() => {
+    renderItemCount(0);
   });
 }
 
