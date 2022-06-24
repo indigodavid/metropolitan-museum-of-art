@@ -3,6 +3,10 @@
     flex-direction: row;
   }
 
+  footer {
+    flex-direction: row;
+  }
+
   .art-object {
     flex-basis: 30%;
   }

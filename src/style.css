@@ -189,10 +189,13 @@ nav li {
 
 footer {
   display: flex;
-  flex-direction: row;
-  gap: 20em;
+  flex-direction: column;
+  justify-content: space-between;
   background-color: var(--color-accent);
   color: var(--color-negative);
+  align-items: center;
+  padding-left: 2rem;
+  padding-right: 2rem;
 }
 
 .license-img {
@@ -203,6 +206,7 @@ footer {
 .logos {
   display: flex;
   flex-direction: row;
+  justify-content: center;
 }
 
 .references {
