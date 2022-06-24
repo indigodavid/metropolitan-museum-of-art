@@ -45,12 +45,6 @@ header {
   align-items: center;
 }
 
-footer {
-  padding: 1rem;
-  background-color: var(--color-accent);
-  color: var(--color-negative);
-}
-
 a,
 a:hover,
 a:focus,
@@ -163,4 +157,26 @@ nav ul {
   font-family: var(--font-logo);
   font-size: 2.5rem;
   font-weight: 700;
+}
+
+footer {
+  display: flex;
+  flex-direction: row;
+  gap: 20em;
+  background-color: var(--color-accent);
+  color: var(--color-negative);
+}
+
+.license-img {
+  width: 60px;
+  padding: 7px;
+}
+
+.logos {
+  display: flex;
+  flex-direction: row;
+}
+
+.references {
+  text-align: center;
 }

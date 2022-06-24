@@ -4,6 +4,10 @@
   }
 }
 
+.swal2-styled.swal2-confirm {
+  display: none !important;
+}
+
 #comment {
   padding: 0;
 }

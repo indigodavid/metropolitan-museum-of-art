@@ -11,8 +11,8 @@ const displayPopup = (data) => {
           <h3 class=“art-title”>${data.title}</h3>
         <div class=“art-details-container”>
            <p> ${data.artistDisplayName}</p>
-           <p> <b>Art dimension</b>: ${data.dimensions}</p>
-            <p> <b>Art date </b> :${data.objectDate}</p>
+           <p><b>Art dimension</b>: ${data.dimensions}</p>
+            <p><b>Art date </b> :${data.objectDate}</p>
         </div>
         <div class=“comments-container”>
             <h3 class=“comment-header”>Comments<span id="total-comments"></span></h3>
@@ -21,8 +21,8 @@ const displayPopup = (data) => {
        <h4>Add comments</h4>
        <form id='form' method='post' action='#'>
         <input id="name" type="text" placeholder= "your name"  required> <br><br>
-    <textarea id="comment" type="text" placeholder= "Your insight" required rows="3" cols="50"> </textarea><br><br>
-    <input type="submit" class="submit" value='comment'/>
+    <textarea id="comment" type="text" placeholder= "Your insight" required rows="4" cols="50"> </textarea><br><br>
+    <input type="submit" class="submit comment-button" value='comment'/>
     </form>
     </div>`,
     showCloseButton: true,
