@@ -3,6 +3,7 @@
 # Metropolitan Museum of Art
 
 > This project displays the art collection using the Metropolitan Museum of Art API. For this project we used HTML, CSS, Javascript, Webpack and Jest.
+> We describe the features of our website [here](https://drive.google.com/file/d/15YUZL-H1LLVOKzSFiTDzLSB8KBPxr38U/view?usp=sharing).
 
 ![](./src/images/web-mockup.png)
 
