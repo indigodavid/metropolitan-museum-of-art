@@ -228,22 +228,21 @@ footer {
 .pagination button {
   padding: 0.5rem 1rem;
   border: 1px solid #ddd;
-  border-radius: 2rem;
+  border-radius: 0.5rem;
   background-color: var(--color-accent);
   color: var(--color-negative);
   cursor: pointer;
-  border-radius: 4px;
   transition: background-color 0.3s;
-}
-
-.pagination button:hover:not(:disabled) {
-  background-color: var(--color-active);
 }
 
 .pagination button:disabled {
   opacity: 0.5;
   cursor: not-allowed;
   color: var(--color-disabled);
+}
+
+.pagination button:hover:not(:disabled) {
+  background-color: var(--color-active);
 }
 
 .page-info {

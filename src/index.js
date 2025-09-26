@@ -59,7 +59,7 @@ const searchArt = (query, page = 1) => {
   });
 };
 
-searchArt(initialSearch, 1);
+searchArt(currentQuery, 1);
 
 searchInput.oninput = () => {
   window.addEventListener('keypress', (e) => {
