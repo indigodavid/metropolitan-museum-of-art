@@ -63,7 +63,7 @@ Check the live version [here](https://indigodavid.github.io/metropolitan-museum-
 
 - GitHub: [@indigodavid](https://github.com/indigodavid)
 - Twitter: [@indigo1987](https://twitter.com/indigo1987)
-- LinkedIn: [LinkedIn](https://linkedin.com/in/david-vera-castillo-001b5756/)
+- LinkedIn: [LinkedIn](https://linkedin.com/in/davidveracastillo/)
 
 ## 🤝 Contributing
 

@@ -212,3 +212,40 @@ footer {
 .references {
   text-align: center;
 }
+
+.pagination {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 2rem 0;
+  gap: 1rem;
+  border-radius: 1rem;
+  padding: 1rem;
+  background-color: var(--color-negative);
+  box-shadow: 0.4rem 0.4rem 0.4rem var(--color-primary), -0.1rem -0.1rem 0.1rem var(--color-primary);
+}
+
+.pagination button {
+  padding: 0.5rem 1rem;
+  border: 1px solid #ddd;
+  border-radius: 0.5rem;
+  background-color: var(--color-accent);
+  color: var(--color-negative);
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.pagination button:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+  color: var(--color-disabled);
+}
+
+.pagination button:hover:not(:disabled) {
+  background-color: var(--color-active);
+}
+
+.page-info {
+  padding: 0.5rem 1rem;
+  font-weight: bold;
+}
